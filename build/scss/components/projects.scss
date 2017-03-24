@@ -1,0 +1,200 @@
+.projects {
+    padding: 9rem 0;
+    background-color: #fff;
+    background: url(../img/bg-projects1.jpg) center top, url(../img/bg-projects2.jpg) center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.projects__container {
+    @extend .container;
+}
+.projects__title {
+    @extend .title;
+}
+.projects__box {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5rem 0 0 0;
+}
+.projects__item {
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    width: 31.5%;
+    margin: 0 2.75% 3rem 0;
+    background-color: #fff;
+    text-align: center;
+    transition: all .5s ease;
+    border-radius: $brb;
+    box-shadow: 0 10px 20px 0 transparentize(#3a3a3a, .9);
+    &:nth-child(3n+3) {
+        margin: 0 0 3rem 0;
+    }
+    &:hover, &:active {
+        box-shadow: 0 10px 80px 0 transparentize(#3a3a3a, .65);
+        .projects__item-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.projects__item_bg_green {
+    background-color: $main-color;
+    .projects__item-title {
+        color: #fff;
+    }
+    .projects__item-price {
+        color: #fff;
+    }
+    .projects__item-button {
+        a {
+            @extend .button_transparent_white;
+        }
+    }
+}
+.projects__item-img {
+    flex: 0 1 auto;
+    overflow: hidden;
+    border-top-left-radius: $brb;
+    border-top-right-radius: $brb;
+    background-color: lighten($main-color, 40%);
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto ;
+        height: auto;
+        transition: all .5s ease;
+        border-top-left-radius: $brb;
+        border-top-right-radius: $brb;
+    }
+}
+.projects__item-box {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 7.5% 3rem 7.5%;
+}
+.projects__item-title {
+    color: #000;
+    h3 {
+        margin: 0;
+        font-size: 2.2rem;
+        line-height: 1.1;
+        font-weight: 600;
+    }
+}
+.projects__item-price {
+    margin: 2rem 0 0 0;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $main-color;
+    b {
+        font-size: 3rem;
+    }
+}
+.projects__item-text {
+    margin: 2rem 0 0 0;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #000;
+    strong {
+        font-weight: 600;
+        color: $main-color;
+        text-transform: uppercase;
+    }
+    small {
+        font-size: 1.6rem;
+    }
+}
+.projects__item-button {
+    margin: 2rem 0 0 0;
+    a {
+        @extend .button;
+        @extend .button_hover_shadow;
+        border-radius: $brb;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+    }
+}
+.projects__pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 0 0;
+
+    a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin: 2px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #848484;
+        text-decoration: none;
+        background-color: #fff;
+        border: 1px solid #e1e1e1;
+        text-align: center;
+        transition: all .5s ease;
+
+        &:hover, &:active, &:focus {
+            background-color: $main-color;
+            border-color: $main-color;
+            color: #fff;
+        }
+        &.active {
+            background-color: #e1e1e1;
+            border-color: #e1e1e1;
+            color: #848484;
+        }
+    }
+}
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .projects__item {
+        width: 48%;
+        margin: 0 4% 3rem 0;
+        &:nth-child(3n+3) {
+            margin: 0 4% 3rem 0;
+        }
+        &:nth-child(2n+2) {
+            margin: 0 0 3rem 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+    .projects__box {
+        display: block;
+    }
+    .projects__item {
+        width: auto;
+        margin: 0 0 3rem 0;
+        &:nth-child(3n+3) {
+            margin: 0 0 3rem 0;
+        }
+        &:nth-child(2n+2) {
+            margin: 0 0 3rem 0;
+        }
+    }
+}

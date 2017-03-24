@@ -1,0 +1,173 @@
+.consult {
+    padding: 9rem 0 0 0;
+    background-color: lighten($main-color, 40%);
+    background-image: url(../img/bg-consult.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.consult__container {
+    @extend .container;
+}
+.consult__title {
+    @extend .title;
+    color: #fff;
+}
+.consult__box {
+    margin: 5rem 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.consult__img {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: flex-end;
+    width: 29%;
+    padding: 0 2.5%;
+    img {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+.consult__text {
+    order: 1;
+    flex: 0 1 auto;
+    width: 31%;
+    padding: 0 2.5% 0 2.5%;
+    text-align: center;
+}
+.consult__text-name {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    font-weight: 600;
+    color: #fff;
+}
+.consult__text-position {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 300;
+    color: #fff;
+}
+.consult__form {
+    order: 2;
+    flex: 0 1 auto;
+    width: 40%;
+    padding: 5rem 4.5% 5rem 2.5%;
+}
+.consult__form-title {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 300;
+    color: #fff;
+}
+.consult__form-input {
+    margin: 1rem 0 0 0;
+    display: block;
+    input {
+        flex: 1 1 auto;
+        display: block;
+        width: 100%;
+        height: 5.5rem;
+        padding: 0 2rem;
+        line-height: 5.5rem;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 300;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid #fff;
+        border-radius: $brs;
+        outline: 0;
+        box-shadow: none;
+        font-family: 'Proxima Nova', Verdana, sans-serif;
+        transition: all .5s ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        -o-appearance: none;
+        appearance: none!important;
+        &::-webkit-input-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+        &:-moz-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+        &::-moz-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+        	color: #fff;
+        	opacity: 1;
+        }
+		&:hover, &:active, &:focus {
+            border-color: $main-color;
+		}
+    }
+}
+.consult__form-submit {
+    margin: 1rem 0 0 0;
+    button {
+        @extend .button;
+        display: block;
+        width: 100%;
+    }
+}
+.consult__form-text {
+    margin: 1.5rem 0 0 0;
+    font-size: 1.8rem;
+    line-height: 1.25;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .consult__box {
+        display: block;
+    }
+    .consult__form {
+        width: auto;
+        padding: 0;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .consult__form-title {
+        text-align: center;
+    }
+    .consult__text {
+        width: auto;
+        padding: 0;
+        margin: 6rem 0 0 0;
+    }
+    .consult__img {
+        width: 70%;
+        margin: 4rem auto 0 auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}
