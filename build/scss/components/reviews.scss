@@ -15,7 +15,7 @@
 .reviews__slider {
     margin: 6rem 0 0 0;
     &.owl-carousel {
-        padding: 0 50px;
+        padding: 0 70px;
         .owl-nav {
             .owl-prev,
             .owl-next {
@@ -24,7 +24,7 @@
                 transform: translateY(-50%);
                 width: 36px;
                 height: 36px;
-                background-color: #d4d4d4;
+                background-color: $main-color;
                 border-radius: $brb;
                 transition: all .5s ease;
                 &:before {
@@ -39,7 +39,11 @@
                     border-bottom: 1px solid #fff;
                 }
                 &:hover, &:active {
-                    background-color: $main-color;
+                    background-color: lightem($main-color, 10%);
+                    box-shadow: 0 10px 30px -5px transparentize(#3a3a3a, .65);
+                }
+                &.disabled {
+                    background-color: #d4d4d4;
                 }
             }
             .owl-prev {

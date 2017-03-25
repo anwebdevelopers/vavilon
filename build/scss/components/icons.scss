@@ -4,9 +4,6 @@ i[class^="icon-"] {
 	background-image: url(../img/sprites.png);
     background-repeat: no-repeat;
 }
-.icon-advantages1, .icon-advantages2, .icon-advantages4, .icon-advantages3, .icon-mark, .icon-phone, .icon-mail, .icon-inst, .icon-vk, .icon-magnifier{
-	background: url(sprites.png) no-repeat;
-}
 
 .icon-advantages1{
 	background-position: 0 0;
@@ -66,4 +63,34 @@ i[class^="icon-"] {
 	background-position: 0 -398px ;
 	width: 42px;
 	height: 41px;
+}
+
+.icon-play{
+	background-position: 0 -444px ;
+	width: 49px;
+	height: 34px;
+}
+
+.icon-tecnology1{
+	background-position: 0 -554px ;
+	width: 28px;
+	height: 27px;
+}
+
+.icon-tecnology2{
+	background-position: 0 -519px ;
+	width: 28px;
+	height: 28px;
+}
+
+.icon-tecnology3{
+	background-position: 0 -484px ;
+	width: 26px;
+	height: 31px;
+}
+
+.icon-tecnology4{
+	background-position: 0 -587px ;
+	width: 38px;
+	height: 20px;
 }

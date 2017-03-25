@@ -1,0 +1,84 @@
+.about {
+    padding: 9rem 0;
+    background-color: $main-color;
+    background-image: url(../img/bg-about.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.about__container {
+    @extend .container;
+}
+.about__title {
+    @extend .title;
+    color: #fff;
+}
+.about__content {
+    margin: 7rem 4.5% 0 4.5%;
+    text-align: center;
+    color: #fff;
+}
+.about__content-title {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #fff;
+    b {
+        font-weight: 600;
+    }
+}
+.about__content-text {
+    margin: 4.5rem 0 0 0;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: #fff;
+    p {
+        margin: 1.5rem 0 0 0;
+    }
+
+}
+.about__content-button {
+    margin: 5rem 0 0 0;
+    a {
+        @include btn;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1.8rem;
+        line-height: 1.25;
+        font-weight: 300;
+        color: #fec415;
+        border-bottom: 1px dashed #fec415;
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            color: $main-color;
+            border-color: $main-color;
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .about__content {
+        margin: 7rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

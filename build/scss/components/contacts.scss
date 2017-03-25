@@ -1,0 +1,75 @@
+.contacts {
+    position: relative;
+    padding: 7rem 0;
+
+}
+.contacts__container {
+    @extend .container;
+    position: relative;
+    z-index: 1;
+}
+.contacts__map {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.contacts__box {
+    width: 43%;
+    padding: 5rem 4.5%;
+    background-color: #fff;
+    border-radius: $brb;
+    box-shadow: 0 10px 30px -5px transparentize(#3a3a3a, .65);
+}
+.contacts__title {
+    @extend .title;
+    text-align: left;
+    color: #49494a;
+    h2 {
+        text-transform: none;
+    }
+}
+.contacts__item {
+    position: relative;
+    margin: 2rem 0 0 0;
+    padding: 0 0 0 4.5rem;
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #4c4c4c;
+    i[class^="icon-"] {
+        position: absolute;
+        top: 0;
+        left: 1.5rem;
+        transform: translateX(-50%);
+    }
+    b {
+        font-weight: 600;
+        color: $main-color;
+    }
+    a {
+        text-decoration: none;
+        color: #4c4c4c;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        transition: all .5s ease;
+        &:hover, &:active, &:focus {
+            border-bottom: 1px solid $main-color;
+            color: $main-color;
+        }
+    }
+}
+
+.contacts__button {
+    margin: 2rem 0 0 0;
+    a {
+        @extend .button;
+        @extend .button_hover_shadow;
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        border-radius: $brb;
+    }
+}

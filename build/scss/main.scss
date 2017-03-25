@@ -75,6 +75,7 @@ a {
 	border: 1px solid $main-color;
 	background-color: $main-color;
 	border-radius: $brs;
+	text-align: center;
 	transition: all .5s ease;
 	&:hover, &:active, &:focus {
 		background-color: lighten($main-color, 10%);
@@ -117,8 +118,12 @@ a {
 @import "components/projects.scss";
 @import "components/consult.scss";
 @import "components/reviews.scss";
-
-
+@import "components/brigade.scss";
+@import "components/build.scss";
+@import "components/technology.scss";
+@import "components/about.scss";
+@import "components/contacts.scss";
+@import "components/footer.scss";
 
 //ALWAYS END
 // @import "components/media.scss";
