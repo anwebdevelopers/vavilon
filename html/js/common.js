@@ -52,36 +52,7 @@ $(function() {
         autoHeight: true
     });
 
-    //------------------------------------
-    //popup
-    //------------------------------------
 
-    $('.popup-with-move-anim').magnificPopup({
-        type: 'inline',
-        fixedContentPos: false,
-        fixedBgPos: true,
-        overflowY: 'auto',
-        closeBtnInside: true,
-        preloader: false,
-        midClick: true,
-        removalDelay: 300,
-        mainClass: 'my-mfp-slide-bottom'
-    });
-
-    //------------------------------------
-    //popup
-    //------------------------------------
-    $('.popup-zoom').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        gallery: {
-            enabled: true
-        },
-        zoom: {
-            enabled: true,
-            duration: 300
-        }
-    });
 
     //---------------------------------
     //Cлайдер brigade
@@ -188,6 +159,64 @@ $(function() {
         }
     });
 
+    //-------------------------------
+    //Projects Gallery
+    //-------------------------------
+    $('.projects__popup-gallery-thumbs').on('click', '.projects__popup-gallery-thumbs-item:not(.active)', function() {
+        var imgPath = $(this).children('img').attr('src');
+        var oldImage = $(this).closest('.projects__popup-gallery').find('.projects__popup-gallery-img img');
+        var newImage = $('<img src="' + imgPath + '">');
+        newImage.hide();
+        $(this).closest('.projects__popup-gallery').find('.projects__popup-gallery-img').append(newImage);
+        newImage.fadeIn(600);
+        oldImage.fadeOut(600, function() {
+            $(this).remove();
+        });
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('.projects__popup-gallery').find('.projects__popup-gallery-thumbs-item:first').click();
+
+
+    //------------------------------------
+    //popup
+    //------------------------------------
+
+    $('.popup-with-move-anim').magnificPopup({
+        type: 'inline',
+        fixedContentPos: false,
+        fixedBgPos: true,
+        overflowY: 'auto',
+        closeBtnInside: true,
+        preloader: false,
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-slide-bottom'
+    });
+
+    //------------------------------------
+    //popup
+    //------------------------------------
+    $('.popup-zoom').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300
+        }
+    });
+
+    //------------------------------------------------
+    // Плавный скролл
+    //------------------------------------------------
+
+    $('a[href*="#"]').click(function(e) {
+        e.preventDefault();
+        var thisSect = $($(this).attr('href')).offset().top;
+        $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * .1) * 5), 'swing');
+    });
 
     //--------------------------------------------------------------------
     //Яндекс карта
@@ -220,10 +249,12 @@ $(function() {
             });
             function disableDrag() {
                 var w = $(window).width();
-                if (w <= 768) {
+                if (w <= 640) {
                     myMap.behaviors.disable('drag');
+                    myMap.panTo([55.781002, 49.135815], {flying: false, duration: 400});
                 } else {
                     myMap.behaviors.enable('drag');
+                    myMap.panTo([55.779466, 49.132403], {flying: false, duration: 400});
                 }
             }
             disableDrag();
