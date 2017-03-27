@@ -212,7 +212,7 @@ $(function() {
     // Плавный скролл
     //------------------------------------------------
 
-    $('a[href*="#"]').click(function(e) {
+    $('.scroll').click(function(e) {
         e.preventDefault();
         var thisSect = $($(this).attr('href')).offset().top;
         $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * .1) * 5), 'swing');
