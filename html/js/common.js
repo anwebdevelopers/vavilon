@@ -2,6 +2,27 @@ $(function() {
 
     'use strict';
 
+    //------------------------------------------------------------
+    //stick menu
+    //------------------------------------------------------------
+    var $stick = $('.stick'),
+       $stickInner = $('.stick__inner');
+    if ($stick.length) {
+       var startPos = $stick.offset().top;
+       $(window).scroll(function() {
+           if ($(window).scrollTop() >= startPos) {
+               if ($stick.hasClass('stick_active') == false) {
+                   var navHeight = $stick.height();
+                   $stick.css({
+                       'min-height': navHeight + 'px'
+                   }).addClass('stick_active');
+               }
+           } else {
+               $stick.removeClass('stick_active').removeAttr('style');
+           }
+       });
+    }
+
     //-------------------------------
     //Мобильное меню
     //-------------------------------
@@ -15,6 +36,14 @@ $(function() {
             $headerNavList.slideDown(300);
         } else {
             $(this).removeClass('active');
+            $headerNavList.slideUp(300);
+        }
+    });
+
+    $headerNavList.on('click', 'a', function() {
+        var w = $(window).width();
+        if (w <= 640) {
+            $headerNavButton.removeClass('active');
             $headerNavList.slideUp(300);
         }
     });
@@ -208,19 +237,27 @@ $(function() {
         }
     });
 
+
+    //------------------------------------------------
+    //Передача клика на кнопку проектов
+    //------------------------------------------------
+    $('.projects__item').on('click', function() {
+        $(this).find('.projects__item-button a').trigger('click');
+    });
+
+
     //------------------------------------------------
     // Плавный скролл
     //------------------------------------------------
 
-    $('.scroll').click(function(e) {
-        e.preventDefault();
-        var thisSect = $($(this).attr('href')).offset().top;
-        $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * .1) * 5), 'swing');
+    $(".scroll").mPageScroll2id({
+        offset: $stick.height()
     });
 
-    //--------------------------------------------------------------------
+    //------------------------------------------------
     //Яндекс карта
-    //--------------------------------------------------------------------
+    //------------------------------------------------
+
     var $map = $('#map');
     if ($map.length) {
         ymaps.ready(function() {

@@ -55,6 +55,18 @@
         color: #000;
     }
 }
+.stick.stick_active {
+    position: relative;
+    z-index: 10;
+    .stick__inner {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        transition: all .5s ease;
+    }
+}
 .header__nav {
     position: relative;
     background-color: lighten($main-color, 10%);
@@ -134,7 +146,7 @@
 				transform: translateY(20px);
 				transition: opacity .3s ease, transform .3s ease;
 			}
-			&:hover, &:active, &:focus {
+			&:hover, &:active, &:focus, &.mPS2id-highlight {
 				&:after {
 					opacity: 1;
 					transform: translateY(0);
